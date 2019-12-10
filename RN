@@ -1,0 +1,26 @@
+def hesabla(input):
+my_string = input
+rum_num = [ ('I', '1'), ('II', '2'), ('III', '3')]
+for k, v in rum_num:
+if k == input and k != None:
+my_string = v
+else:
+my_string = my_string.replace(k, v)
+return my_string
+
+
+def turn_rum(input):
+my_string = str(input)
+rum_num = [ ('I', '1'), ('II', '2'), ('III', '3')]
+for k, v in rum_num:
+if v == input and v != None:
+my_string = k
+else:
+my_string = my_string.replace(v, k)
+return my_string
+
+input = "I+II".split("+")
+calc = 0
+for x in input:
+calc+=int(hesabla(x))
+print turn_rum(calc)
